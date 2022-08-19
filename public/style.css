@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:800|Merriweather+Sans|Share+Tech+Mono");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+:root {
+  --ui-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 4px 5px 0 rgba(0, 0, 0, 0.06), 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+  fill: rgba(0, 0, 0, 0.54);
+  --ui-shadow-border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  color: #2a3747;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+.View {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  background-size: cover;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.Banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%;
+  margin-bottom: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  padding: 10px;
+  font-family: "Montserrat", monospace;
+  border-bottom: var(--ui-shadow-border);
+  box-shadow: var(--ui-shadow);
+}
+
+.Message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  border-radius: 20px;
+  overflow-y: auto;
+  background: white;
+  padding: 10px;
+  font-family: "Montserrat", monospace;
+  border-bottom: var(--ui-shadow-border);
+  box-shadow: var(--ui-shadow);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.Message.Footer{
+  font-size: 10px;
+  flex-direction: row;
+  margin-top: auto;
+  padding-top: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 45px;
+}
+
+.NavButtons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.NavButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 150px;
+  background: #efb73f;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+  border-bottom: var(--ui-shadow-border);
+  box-shadow: var(--ui-shadow);
+}
+
+.NavButtonSmall{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  width: 5rem;
+  background: #efb73f;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+  padding: 20px;
+  transition-duration: 0.45s;
+  border-bottom: var(--ui-shadow-border);
+  box-shadow: var(--ui-shadow);
+}
+
+.NavButtonSmall:hover {
+  background: white;
+  color: black;
+}
+
+#pakiet1  {
+  background: #3faeef;
+}
+
+.UserView {
+  background: #efb73f;
+  background-size: cover;
+  display: flex;
+}
+
+.List {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 14px;
+  overflow: auto;
+}
+
+.ListItem {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  overflow: hidden;
+  background: white;
+  padding: 15px;
+  margin-inline: 10px;
+  margin-bottom: 20px;
+  border-bottom: var(--ui-shadow-border);
+  box-shadow: var(--ui-shadow);
+  border-radius: 14px;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ListText {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  overflow: hidden;
+  background: white;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.checkOut {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  width: 75%;
+  justify-content: center;
+  overflow: hidden;
+}
+ 
+input[type=text]{
+  width: 100%;
+  border-bottom:solid #efb73f;
+  border-width:  0 0 3px 0;
+  padding: 5px;
+  font-size: 16px;
+  font-family: "Montserrat", monospace;
+}
+
+input[type=text]:focus{
+  border:#efb73f;
+  border-width:  3px 3px 3px 3px;
+}
+
+input[type=submit]{
+  width: 50%;
+  border-radius: 25px;
+  border-width: 0 0 0 0;
+  background: white;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Montserrat", monospace;
+  align-self: center;
+}
+
+input[type=submit]:hover{
+  background: #3faeef;
+  transition-duration: 0.45s;
+}
+
+button[type=submit]{
+  display: block;
+  background: white;
+  border-radius: 5px;
+  font-family: "Montserrat", monospace;
+  align-self: center;
+  border: none;
+}
+
+.Video{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  border-bottom: var(--ui-shadow-border);
+  box-shadow: var(--ui-shadow);
+}
+
+.Video input[type=submit]{
+  background: white;
+  transition-duration: 0.45s;
+  width: 25%;
+  font-size: 12px;
+  font-weight: 600;
+  height: 25px;
+  font-family: "Montserrat", monospace;
+  align-self: center;
+}
+
+.Video input[type=submit]:hover{
+  background:#efb73f;
+}
+
+.Video input[type=file]{
+  background: rgb(255, 255, 255);
+  width: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Montserrat", monospace;
+  align-self: center;
+}
+
+.Video button[type=submit]{
+  background: white;
+  height: 20px;
+  width: 50%;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  border-width: 0 0 0 0 ;
+  font-family: "Montserrat", monospace;
+  align-self: center;
+}
+
+.Video button[type=submit]:hover{
+  background:#efb73f;
+}
+
+.VideoLesson{
+  display: block;
+}
+
+.VideoBox{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  border-radius: 20px;
+  overflow-y: auto;
+  background: white;
+  padding: 10px;
+  font-family: "Montserrat", monospace;
+  border-bottom: var(--ui-shadow-border);
+  box-shadow: var(--ui-shadow);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  scroll-behavior: smooth;
+}
+
+.VideoBox h1{
+  padding: 10px;
+}
+
+.Pakiet{
+  display: flex;
+  flex-direction: column;
+}
+.Pakiet a{
+  background: #efb73f;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.Chat{
+  width: 80%;
+  height: 20%;
+  background: #efb73f;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  align-self: center;
+}
+
+.ChatButton{
+  background: white;
+  width: 40%;
+  align-self: center;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px;
+  border: solid;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  margin: 10px;
+}
+
+/* Style the tab */
+.Tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.Tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.Tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.Tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.TabContent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
