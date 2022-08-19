@@ -1,0 +1,21 @@
+extends layout
+
+block layout-content
+  div.View.WelcomeView
+    h1.Banner Kurs Matematyka
+      div.NavButtons
+        if isAuthenticated
+          a(href="/user")
+            div.NavButton LEKCJE 
+        else
+          a(href="/login")
+            div.NavButton ZALOGUJ
+    div.Message
+      div.Title
+        h3 Jedyny na rynku
+        h1 Kurs do Egzaminu Osmoklasisty
+      span.Details Kompleksowa platforma e-learningowa
+    footer.Message.Footer 
+        p COPYRIGHT 2022 WOJCIECH BŁASZAK ANTONI GMITRUK JAKUB ŚCIOCH
+        a(href='/privacy-policy') PRIVACY POLICY
+    
