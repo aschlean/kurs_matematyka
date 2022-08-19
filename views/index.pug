@@ -4,12 +4,8 @@ block layout-content
   div.View.WelcomeView
     h1.Banner Kurs Matematyka
       div.NavButtons
-        if isAuthenticated
-          a(href="/user")
-            div.NavButton LEKCJE 
-        else
-          a(href="/login")
-            div.NavButton ZALOGUJ
+        a()
+          div.NavButton ZALOGUJ
     div.Message
       div.Title
         h3 Jedyny na rynku
@@ -17,5 +13,5 @@ block layout-content
       span.Details Kompleksowa platforma e-learningowa
     footer.Message.Footer 
         p COPYRIGHT 2022 WOJCIECH BŁASZAK ANTONI GMITRUK JAKUB ŚCIOCH
-        a(href='/privacy-policy') PRIVACY POLICY
+        a() PRIVACY POLICY
     
